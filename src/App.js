@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import UserProvider from './components/User/UserProvider';
+import Hearing from './components/Hearing/Hearing';
 
-function App() {
+
+// TODO: set all text in resources
+// TODO: create login screen to get userName and hearingId
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <UserProvider userId={123}>
+      <Hearing hearingId="123"></Hearing>
+    </UserProvider>
+  )
 }
 
 export default App;
